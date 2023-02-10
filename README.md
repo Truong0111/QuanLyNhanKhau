@@ -1,0 +1,2 @@
+# QuanLyNhanKhau
++ quản lý covid
