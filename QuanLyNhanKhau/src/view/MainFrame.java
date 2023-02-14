@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.BorderLayout;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
@@ -53,6 +54,7 @@ public class MainFrame extends javax.swing.JFrame {
         btnthongke = new view.other.MyButton();
         btncovid = new view.other.MyButton();
         pnmain = new javax.swing.JPanel();
+        pn_main = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,6 +69,9 @@ public class MainFrame extends javax.swing.JFrame {
         btnhome.setForeground(new java.awt.Color(255, 255, 255));
         btnhome.setText("Trang chủ");
         btnhome.setBorderColor(new java.awt.Color(0, 160, 50));
+        btnhome.setColor(new java.awt.Color(0, 160, 50));
+        btnhome.setColorClick(new java.awt.Color(0, 160, 50));
+        btnhome.setColorOver(new java.awt.Color(0, 160, 48));
         btnhome.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         btnhome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,12 +96,13 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        btnnhankhau.setBackground(new java.awt.Color(102, 102, 102));
         btnnhankhau.setBorder(null);
         btnnhankhau.setForeground(new java.awt.Color(255, 255, 255));
         btnnhankhau.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/multiple-users-silhouette.png"))); // NOI18N
         btnnhankhau.setText("Nhân khẩu");
         btnnhankhau.setBorderColor(new java.awt.Color(102, 102, 102));
+        btnnhankhau.setColor(new java.awt.Color(102, 102, 102));
+        btnnhankhau.setColorOver(new java.awt.Color(153, 153, 153));
         btnnhankhau.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         btnnhankhau.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +116,8 @@ public class MainFrame extends javax.swing.JFrame {
         btnhokhau.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/home.png"))); // NOI18N
         btnhokhau.setText("Hộ Khẩu");
         btnhokhau.setBorderColor(new java.awt.Color(102, 102, 102));
+        btnhokhau.setColor(new java.awt.Color(102, 102, 102));
+        btnhokhau.setColorOver(new java.awt.Color(153, 153, 153));
         btnhokhau.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         btnhokhau.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +131,8 @@ public class MainFrame extends javax.swing.JFrame {
         btnthongke.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/increasing-stocks-graphic.png"))); // NOI18N
         btnthongke.setText("Thống kê");
         btnthongke.setBorderColor(new java.awt.Color(102, 102, 102));
+        btnthongke.setColor(new java.awt.Color(102, 102, 102));
+        btnthongke.setColorOver(new java.awt.Color(153, 153, 153));
         btnthongke.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         btnthongke.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,6 +145,8 @@ public class MainFrame extends javax.swing.JFrame {
         btncovid.setForeground(new java.awt.Color(255, 255, 255));
         btncovid.setText("Covid");
         btncovid.setBorderColor(new java.awt.Color(102, 102, 102));
+        btncovid.setColor(new java.awt.Color(102, 102, 102));
+        btncovid.setColorOver(new java.awt.Color(153, 153, 153));
         btncovid.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         btncovid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,18 +180,36 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(btnthongke, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btncovid, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 242, Short.MAX_VALUE))
+                .addGap(0, 236, Short.MAX_VALUE))
+        );
+
+        pnmain.setBackground(new java.awt.Color(255, 255, 255));
+        pnmain.setPreferredSize(new java.awt.Dimension(1000, 588));
+
+        javax.swing.GroupLayout pn_mainLayout = new javax.swing.GroupLayout(pn_main);
+        pn_main.setLayout(pn_mainLayout);
+        pn_mainLayout.setHorizontalGroup(
+            pn_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 500, Short.MAX_VALUE)
+        );
+        pn_mainLayout.setVerticalGroup(
+            pn_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout pnmainLayout = new javax.swing.GroupLayout(pnmain);
         pnmain.setLayout(pnmainLayout);
         pnmainLayout.setHorizontalGroup(
             pnmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(pnmainLayout.createSequentialGroup()
+                .addComponent(pn_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(500, Short.MAX_VALUE))
         );
         pnmainLayout.setVerticalGroup(
             pnmainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(pnmainLayout.createSequentialGroup()
+                .addComponent(pn_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jpnContainerLayout = new javax.swing.GroupLayout(jpnContainer);
@@ -187,17 +217,21 @@ public class MainFrame extends javax.swing.JFrame {
         jpnContainerLayout.setHorizontalGroup(
             jpnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnContainerLayout.createSequentialGroup()
-                .addComponent(jpnMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jpnMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnmain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jpnContainerLayout.setVerticalGroup(
             jpnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpnMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jpnContainerLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pnmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jpnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpnContainerLayout.createSequentialGroup()
+                        .addComponent(jpnMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jpnContainerLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(pnmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -220,23 +254,69 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnhomeActionPerformed
 
     private void btnnhankhauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnhankhauActionPerformed
+        pn_main.removeAll();
+        pn_main.setLayout(new BorderLayout());
         NhanKhauManagerForm nkmf = new NhanKhauManagerForm(this);
-        pnmain.add(nkmf);
+        pn_main.add(nkmf);
         pack();
     }//GEN-LAST:event_btnnhankhauActionPerformed
 
     private void btnhokhauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhokhauActionPerformed
-        // TODO add your handling code here:
+        pn_main.removeAll();
+        pn_main.setLayout(new BorderLayout());
+        HoKhauManageForm hkmf = new HoKhauManageForm(this);
+        pn_main.add(hkmf);
+        pack();
     }//GEN-LAST:event_btnhokhauActionPerformed
 
     private void btnthongkeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnthongkeActionPerformed
-        // TODO add your handling code here:
+        pn_main.removeAll();
+        pn_main.setLayout(new BorderLayout());
+        ThongKeForm tkf = new ThongKeForm(this);
+        pn_main.add(tkf);
+        pack();
     }//GEN-LAST:event_btnthongkeActionPerformed
 
     private void btncovidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncovidActionPerformed
-        // TODO add your handling code here:
+        pn_main.removeAll();
+        pn_main.setLayout(new BorderLayout());
+        CovidManagerForm cmf = new CovidManagerForm(this);
+        pn_main.add(cmf);
+        pack();
     }//GEN-LAST:event_btncovidActionPerformed
 
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MainFrame().setVisible(true);
+            }
+        });
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Home;
     private view.other.MyButton btncovid;
@@ -246,6 +326,7 @@ public class MainFrame extends javax.swing.JFrame {
     private view.other.MyButton btnthongke;
     private javax.swing.JPanel jpnContainer;
     private javax.swing.JPanel jpnMenu;
+    private javax.swing.JPanel pn_main;
     private javax.swing.JPanel pnmain;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,7 +1,7 @@
 package view.nhankhaumanager;
 
 import Bean.NhanKhauBean;
-import controllers.LoginController;
+import controller.LoginController;
 import controllers.NhanKhauManagerController.AddNewController;
 import controllers.NhanKhauManagerPanelController;
 import java.awt.event.WindowAdapter;
