@@ -18,6 +18,7 @@
 --
 -- Table structure for table `chung_minh_thu`
 --
+use cnpm;
 
 DROP TABLE IF EXISTS `chung_minh_thu`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
