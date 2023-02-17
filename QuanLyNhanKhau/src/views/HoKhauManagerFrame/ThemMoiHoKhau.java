@@ -389,7 +389,7 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
     }//GEN-LAST:event_cancelBtnActionPerformed
 
     private void editBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBtnActionPerformed
-        ChangeListPeopleFrame changeListPeopleJframe = new ChangeListPeopleFrame(list, this);
+        ChangeListPeopleJframe changeListPeopleJframe = new ChangeListPeopleJframe(list, this);
         changeListPeopleJframe.setLocationRelativeTo(null);
         changeListPeopleJframe.setResizable(false);
         changeListPeopleJframe.setVisible(true);

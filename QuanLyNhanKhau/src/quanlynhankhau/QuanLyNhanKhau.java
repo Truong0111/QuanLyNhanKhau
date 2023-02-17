@@ -1,21 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package quanlynhankhau;
 
+import java.util.Calendar;
 import javax.swing.UIManager;
-import view.LoginUI;
+import views.LoginUI;
+import views.MainFrame;
 
 /**
  *
- * @author Administrator
+ * @author Hai
  */
 public class QuanLyNhanKhau {
 
-    /**
-     * @param args the command line arguments
-     */
+    public static Calendar calendar = Calendar.getInstance();
+    
     public static void main(String[] args){
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
