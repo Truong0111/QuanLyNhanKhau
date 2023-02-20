@@ -13,6 +13,7 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import views.CovidManagerPanel;
 import views.HoKhauManagePanel;
 import views.HomePagePanel;
 import views.NhanKhauManagePanel;
@@ -58,6 +59,9 @@ public class MainController {
                     view = new ThongKePanel(this.jfrMain);
                     break;
                 //any more
+                case "Covid":
+                    view = new CovidManagerPanel(this.jfrMain);
+                    break;
                 default:
                     break;
             }
@@ -127,8 +131,9 @@ public class MainController {
                 case "ThongKe":
                     view = new ThongKePanel(this.jfrMain);
                     break;
-                case "Poong":
-//                    view = new PhatThuongPanel(this.jfrMain);
+                case "Covid":
+                    view = new CovidManagerPanel(this.jfrMain);
+                    break;
                 default:
                     break;
             }
